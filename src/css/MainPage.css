@@ -1,0 +1,50 @@
+main {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.h2_container {
+    width: 550px;
+    position: absolute;
+    top: 30vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    width: 100%;
+    position: relative;
+    color: white;
+    font-size: 2rem;
+    font-weight: 200;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 90px;
+    display: inline-block;
+}
+
+h2 span, .h2_container > p span{
+    font-weight: 900;
+}
+
+.section_01 > img {
+    width: 100%;
+}
+
+.h2_container > p {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    color: white;
+    width: 320px;
+    text-align: center;
+    line-height: 25px;
+}
+
