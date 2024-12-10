@@ -1,41 +1,23 @@
-main {
-    width: 100%;
-    position: relative;
-    z-index: 1;
+:root {
+    --mainColor : rgb(247, 120, 47);
+    --top : 675px;
 }
 
+/* section01 ===========================================*/
 section {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    height: 500px;
+    max-height: 1600px;
+    position: relative;
 }
 
 .h2_container {
     width: 550px;
     position: absolute;
-    top: 30vw;
+    top: 40%;
     left: 50%;
+    z-index: 2;
     transform: translate(-50%, -50%);
-}
-
-h2 {
-    width: 100%;
-    position: relative;
-    color: white;
-    font-size: 2rem;
-    font-weight: 200;
-    font-size: 4rem;
-    text-align: center;
-    line-height: 90px;
-    display: inline-block;
-}
-
-h2 span, .h2_container > p span{
-    font-weight: 900;
-}
-
-.section_01 > img {
-    width: 100%;
 }
 
 .h2_container > p {
@@ -48,3 +30,190 @@ h2 span, .h2_container > p span{
     line-height: 25px;
 }
 
+h2 span, .h2_container > p span{
+    font-weight: 900;
+}
+
+.h2_container h2 {
+    width: 100%;
+    position: relative;
+    color: white;
+    font-weight: 200;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 90px;
+    display: inline-block;
+}
+
+.section_01 {
+    position: fixed;
+    width: 100%;
+    /* 반응형 할때 다시 서서히 이미지 줄어들게 수정. */
+    /* 여기 높이 없애면 되는듯 이미지 사이즈랑 아래 section 높이도(위치) */
+    height: 800px;
+}
+
+/* 반응형 할때 다시 서서히 이미지 줄어들게 수정. */
+.section_01 img {
+    position: relative;
+    top: -150px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 800px;
+    object-fit: cover;
+}
+
+/* section02 ===========================================*/
+
+@keyframes fontMove {
+    0% {
+        opacity: 0;
+        margin-top: 10px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.section_02 {
+    position: absolute;
+    top: var(--top);
+    padding-top: 2rem;
+    background-color: rgb(250, 243, 235);
+    z-index: 3;
+}
+
+.h3_container {
+    width: 100%;
+    justify-items: center;
+}
+
+.h3_container h3 {
+    position: relative;
+    text-transform: capitalize;
+    display: inline-block;
+    font-size: 2rem;
+    color: var(--mainColor);
+    animation: fontMove 1.5s ease-in;
+}
+
+.h3_container h3 > span {
+    text-transform: none;
+}
+
+.h3_container p {
+    position: relative;
+    top: 0;
+    transform: translate(0, -15px);
+    width: 340px;
+    text-align: center;
+    line-height: 23px;
+    color: rgb(117, 117, 117);
+    font-weight: 400;
+    animation: fontMove 2s ease-in;
+}
+
+.h3_container button {
+    background-color: transparent;
+    border: none;
+}
+
+.h3_container button::after {
+    content: '커뮤니티 바로가기';
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-block;
+    color: var(--mainColor);
+    border: 1px solid var(--mainColor);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.h3_container button:hover::after {
+    background-color: var(--mainColor);
+    color: white;
+}
+
+/* section03 ===========================================*/
+
+.section_recommend-book {
+    position: relative;
+    top: calc(var(--top) + 400px);
+    background-color: rgb(236, 115, 45);
+    z-index: 3;
+}
+
+.section_recommend-book .deco {
+    position: absolute;
+    top: -90px;
+    left: 0;
+    width: 50%;
+    height: 100px;
+    z-index: 3;
+    background-color: rgb(236, 115, 45);
+}
+
+.h4_container {
+    position: relative;
+    color: white;
+    width: 360px;
+    top: 70px;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 0);
+}
+
+.h4_container h4  {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.h4_container h4 span {
+    font-weight: 900;
+}
+
+.h4_container h3{
+    font-size: 3rem;
+}
+
+.recommend-book {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    background-color: red;
+}
+
+.book-detail {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.book-detail h3 {
+    margin: 0;
+}
+
+.book-img {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.list {
+    position: relative;
+    top: 630px;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(222, 207, 235);
+}

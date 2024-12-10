@@ -1,23 +1,14 @@
-import ".../css/MainPage.css";
-import mainImg from "../imgs/main.jpg";
+import "../../css/MainPage.css";
+import Section01 from "./MainSection01";
+import Section02 from "./MainSection02";
+import Section03 from "./MainSection03";
 
 function MainPage() {
   return (
-    <main className="MainPage">
-      <section className="section_01">
-        <div className="h2_container">
-          <h2>
-            <span>함께</span> 읽고 나누는 <span>독후 활동</span>
-          </h2>
-          <p>
-            독서 커뮤니티 <span>책꽃이</span>에서 다양한 책에 관해 이야기하며
-            독후 활동을 해보세요
-          </p>
-        </div>
-        <img src={mainImg} alt="배경 이미지" />
-      </section>
-
-      <section className="section_02"></section>
+    <main>
+      <Section01 />
+      <Section02 />
+      <Section03 />
     </main>
   );
 }
